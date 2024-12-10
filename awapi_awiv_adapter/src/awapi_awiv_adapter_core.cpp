@@ -26,9 +26,9 @@ AutowareIvAdapter::AutowareIvAdapter()
 : Node("awapi_awiv_adapter_node"), tf_buffer_(this->get_clock()), tf_listener_(tf_buffer_)
 {
   // get param
-  status_pub_hz_ = this->declare_parameter("status_pub_hz", 5.0);
-  stop_reason_timeout_ = this->declare_parameter("stop_reason_timeout", 0.5);
-  stop_reason_thresh_dist_ = this->declare_parameter("stop_reason_thresh_dist", 100.0);
+  status_pub_hz_ = this->declare_parameter<double>("status_pub_hz");
+  stop_reason_timeout_ = this->declare_parameter<double>("stop_reason_timeout");
+  stop_reason_thresh_dist_ = this->declare_parameter<double>("stop_reason_thresh_dist");
   const double default_max_velocity = waitForParam<double>(
     this, declare_parameter("node/max_velocity", ""), declare_parameter("param/max_velocity", ""));
   const bool em_stop_param = waitForParam<bool>(
