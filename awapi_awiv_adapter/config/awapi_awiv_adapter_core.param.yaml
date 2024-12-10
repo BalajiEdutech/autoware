@@ -1,0 +1,5 @@
+/**:
+  ros__parameters:
+    status_pub_hz: 5.0
+    stop_reason_timeout: 0.5
+    stop_reason_thresh_dist: 100.0

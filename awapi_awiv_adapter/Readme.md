@@ -272,3 +272,7 @@
 |     | tier4_planning_msgs/ExpandStopRange |      |      |      |
 
 ---
+
+## Parameters
+
+{{ json_to_markdown("/universe/external/tier4_ad_api_adaptor/awapi_awiv_adapter/schema/awapi_awiv_adapter_core.schema.json") }}

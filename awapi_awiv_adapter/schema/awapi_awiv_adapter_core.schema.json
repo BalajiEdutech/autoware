@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "INSERT_TITLE",
+    "type": "object",
+    "definitions": {
+      "awapi_awiv_adapter_core": {
+        "type": "object",
+        "properties": {
+          "status_pub_hz": {
+            "type": "number",
+            "description": "INSERT_DESCRIPTION",
+            "default": "5.0"
+          },
+          "stop_reason_timeout": {
+            "type": "number",
+            "description": "INSERT_DESCRIPTION",
+            "default": "0.5"
+          },
+          "stop_reason_thresh_dist": {
+            "type": "number",
+            "description": "INSERT_DESCRIPTION",
+            "default": "100.0"
+          }
+        },
+        "required": ["status_pub_hz", "stop_reason_timeout", "stop_reason_thresh_dist"],
+        "additionalProperties": false
+      }
+    },
+    "properties": {
+      "/**": {
+        "type": "object",
+        "properties": {
+          "ros__parameters": {
+            "$ref": "#/definitions/awapi_awiv_adapter_core"
+          }
+        },
+        "required": ["ros__parameters"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["/**"],
+    "additionalProperties": false
+  }
